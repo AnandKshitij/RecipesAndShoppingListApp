@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-xs-10">
+        <app-list-edit></app-list-edit>
+        <hr> 
+        <ul class="list-group">
+            <a 
+            class="list-group-item" 
+            style="cursor: pointer"
+            basichighlight
+            *ngFor="let ingr of ingredients; let i= index"
+            (click)="onEditItem(i)">
+            {{ ingr.name }} : {{ ingr.amount }}
+            </a>
+        </ul>
+    </div>
+</div>
+
+<!-- 
+The basichighlight is an attribute directive so we do not need * to select it
+It can be used as normal attributes 
+-->
